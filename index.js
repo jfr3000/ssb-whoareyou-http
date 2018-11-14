@@ -2,7 +2,7 @@
 
 const url = require('url')
 
-exports.name = 'ssb-whoareyou-http'
+exports.name = 'whoareyou-http'
 exports.version = require('./package.json').version
 exports.init = function (sbot) {
   sbot.ws.use(function (req, res, next) {
