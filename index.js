@@ -3,6 +3,7 @@
 const url = require('url')
 
 exports.name = 'whoareyou-http'
+exports.manifest = {}
 exports.version = require('./package.json').version
 exports.init = function (sbot) {
   sbot.ws.use(function (req, res, next) {
