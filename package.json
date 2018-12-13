@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/jfr3000/ssb-whoareyou-http/issues"
   },
-  "homepage": "https://github.com/jfr3000/ssb-whoareyou-http#readme"
+  "homepage": "https://github.com/jfr3000/ssb-whoareyou-http#readme",
+  "dependencies": {
+    "multiserver-address": "^1.0.1",
+    "multiserver-scopes": "^1.0.0"
+  }
 }
