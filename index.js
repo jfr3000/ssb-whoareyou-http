@@ -6,6 +6,9 @@ exports.name = 'whoareyou-http'
 exports.manifest = {}
 exports.version = require('./package.json').version
 exports.init = function (sbot) {
+  // set host in case it hasn't been set
+  const ip = url.parse(sbot.getAddress()).hostname
+  sbot.config.host = ip
   sbot.ws.use(function (req, res, next) {
     if (req.method !== "GET") return next()
     const u = url.parse(req.url)
