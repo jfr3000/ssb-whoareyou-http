@@ -16,14 +16,7 @@ exports.init = function (sbot) {
     if (u.pathname !== '/whoareyou') return next()
 
     res.setHeader('Content-Type', 'text/plain')
-    sbot.getAddress((err, address) => {
-      if (err) {
-        res.statusCode = 503
-        res.end(err.message)
-        return
-      }
-
-      res.end(address)
-    })
+    const address = sbot.getAddress()
+    res.end(address)
   })
 }
